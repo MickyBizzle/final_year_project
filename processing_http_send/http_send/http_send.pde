@@ -17,11 +17,11 @@ void setup() {
   
   output = createWriter("output.txt"); 
 
-  PostRequest post = new PostRequest("http://svmib26.dcs.aber.ac.uk/webapp/public/add_data");
-  post.send();
-  output = createWriter("output.txt");
-  output.println(post.getContent());
-  println(post.getContent());
+  //PostRequest post = new PostRequest("http://svmib26.dcs.aber.ac.uk/webapp/public/add_data");
+  //post.send();
+  //output = createWriter("output.txt");
+  //output.println(post.getContent());
+  //println(post.getContent());
 }
 
 
@@ -49,4 +49,5 @@ void sendData(String data) {
   post.addData("data", data);
   post.send();
   println(post.getContent());
+  output.println(post.getContent());
 }
