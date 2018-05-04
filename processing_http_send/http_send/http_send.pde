@@ -15,13 +15,8 @@ void setup() {
   port = new Serial(this, Serial.list()[0], 115200);
   port.bufferUntil(lf);
   
+  // Save output to file for debugging
   output = createWriter("output.txt"); 
-
-  //PostRequest post = new PostRequest("http://svmib26.dcs.aber.ac.uk/webapp/public/add_data");
-  //post.send();
-  //output = createWriter("output.txt");
-  //output.println(post.getContent());
-  //println(post.getContent());
 }
 
 
@@ -29,12 +24,6 @@ void draw() {
   if (inString != null) {
     sendData(inString);
     inString = null;
-    //int chars = inString.length();
-    //String inB2 = inString.substring(0, chars-2);
-    //dat = int(split(inB2, ','));
-    //printArray(dat);
-    //println();
-    //inString = null;
   }
 }
 
